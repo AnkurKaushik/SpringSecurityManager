@@ -1,4 +1,4 @@
-package com.example.UserManager.controllers;
+package com.example.SpringSecurityManager.controllers;
 
 import java.util.ArrayList;
 
@@ -15,9 +15,11 @@ import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.SessionAttributes;
+import org.springframework.web.servlet.mvc.support.RedirectAttributes;
 
-import com.example.UserManager.entities.User;
-import com.example.UserManager.services.UserService;
+import com.example.SpringSecurityManager.entities.User;
+import com.example.SpringSecurityManager.services.UserService;
+
 
 @Controller
 public class MainController {
@@ -29,11 +31,30 @@ public class MainController {
     String currID = null;
     	
 	 @GetMapping(value="/")
-     public String showIndexPage(ModelMap model, 
+     public String showHomePage(ModelMap model, 
     		 @RequestParam(value="name", required=false, defaultValue="World") String name){
 	     model.addAttribute("name", name);    
-		 return "index";
+		 return "home";
      }
+	 
+	 @PostMapping(value="/index")
+	 public String showIndexPage(@RequestParam("namelogin") String namelogin, @RequestParam("passwordlogin") String passwordlogin, ModelMap modelMap)
+	 {
+		 try {
+			 User u = userService.GetUserByName(namelogin);
+			 if(u.getName().equals(namelogin) && u.getPassword().equals(passwordlogin))
+		     {
+			     return "index";
+			 }
+			 else 
+			 {
+				 return "home";
+			 }
+		 }
+		 catch(NullPointerException e) {
+			 return "home";
+		 }
+	 }
 	 
 	 public boolean isNumber(String s)
 	 {

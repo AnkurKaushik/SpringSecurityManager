@@ -1,4 +1,4 @@
-package com.example.UserManager.entities;
+package com.example.SpringSecurityManager.entities;
 
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;

@@ -1,44 +1,31 @@
-# Searching for a Specific User and Updating the User Information.
+# Implement Spring Security with Authentication .
 ## DESCRIPTION
 
-## Project objective:
+## Project objective: 
 
-Create a Spring MVC web application that will retrieve users based on their user ID. The retrieved user data will then be edited in a form and updated in the database. The entire database processing has to be done using Hibernate. Front pages will be made in JSP.
-
-### Background of the problem statement:
+As a developer, build Authentication Provider in Spring Security.
 
 
-As a part of developing an ecommerce web application, the admin backend requires a module that can retrieve users based on their user ID and update their information as required.
+Background of the problem statement: 
+
+You have been assigned a task by the team to add more flexibility rather than using the standard scenario in building Spring Security.
+
+Following requirements should be met: 
+
+   * You should have a spring MVC web application as part of your submission. (JSP or Thymeleaf are both acceptable front-ends)
+   * User Password style in-memory storage is acceptable but variations on this (such as storing to database) are also acceptable.
+   * Users should be redirected to a login.html page if not authenticated before being redirected to the original page once authenticated.
+   * A few of the source code should be tracked on GitHub repositories. You need to document the tracked  files which are ignored during the final push to the GitHub repository.
+   * The submission of your GitHub repository link  is mandatory. In order to track your task, you need to share the link of the repository in the document. 
+   * The step-by-step process involved in completing this task should be documented.
 
 
-### You must use the following:
+### Hints
+
+You can find a discussion on implementing Spring Security in the [Spring Online Documentation.](https://spring.io/guides/gs/securing-web/)
  
 
- *  Eclipse as the IDE
- *  Apache Tomcat as the web server (Embedded in jar is fine)
- *  Spring MVC with Hibernate, log4j, and MySQL Connector
+### Due Date
 
- 
+2021-03-24
 
-### Following requirements should be met:
-
- *  Create a JSP page to take in a user ID
- *  Create a controller that will validate the user ID. If it is invalid, it will display a JSP page with an error message. If it is valid, it will retrieve user details from the database and show an edit form in JSP
- *  Once the edit form is submitted, the controller will update the details in the database. A confirmation JSP page will be shown
- *  Follow the standard methodology of creating controllers, services, respository, and entity classes
- *  Document the step-by-step process involved in completing this task
-
-#### JSP Pages
-
-Here is a potential list of JSPs for the project. (feel free to modify)
-
- * Index
- * Query User By ID
- * Error for Invalid User Id
- * Edit form for User
- * Confirmation JSP
-
-### Info
-
- * Due Date: 2021-03-16
- 

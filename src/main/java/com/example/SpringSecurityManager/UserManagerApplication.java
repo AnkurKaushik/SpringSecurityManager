@@ -1,4 +1,4 @@
-package com.example.UserManager;
+package com.example.SpringSecurityManager;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;

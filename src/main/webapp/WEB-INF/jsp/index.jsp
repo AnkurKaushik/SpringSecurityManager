@@ -1,5 +1,6 @@
 <html>
 <head>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
 	<style>
 		.center {
 	  		text-align: center;
@@ -9,15 +10,18 @@
 </head>
 <body style="background-color:lightblue;">
 	<div class="center">
-		<h1>User Manager</h1>
+		<h1 class="display-4">Search for a User By ID</h1>
 		
-		<h2 class="hello-title">Search for a User and Update Information</h2>
+		<div class="jumbotron">
 		
-		<a href="/users">View user table</a>
-		<br><br>
-		<form method="post" action="update">
-			Enter an id from the user table: <input type="text" id="id" name="id" placeholder="Type here" required><input type="submit" value="Enter" />
-		</form>
+			<h2 class="hello-title">Login Success</h2>
+			
+			<p class="lead">View user table <a href="/users">here</a></p>
+			<br><br>
+			<form method="post" action="update">
+				<p class="lead">Enter an id from the table: <p><input type="text" id="id" name="id" placeholder="Type here" required><input type="submit" value="Enter" class="btn btn-primary mb-2"/>
+			</form>
+		</div>
 	</div>
 </body>
 </html>

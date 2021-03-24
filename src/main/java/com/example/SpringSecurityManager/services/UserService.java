@@ -1,12 +1,12 @@
-package com.example.UserManager.services;
+package com.example.SpringSecurityManager.services;
 
 import java.util.Optional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.example.UserManager.entities.User;
-import com.example.UserManager.repositories.UserRepository;
+import com.example.SpringSecurityManager.entities.User;
+import com.example.SpringSecurityManager.repositories.UserRepository;
 
 
 
